@@ -1,4 +1,4 @@
-# QA Portfolio - Snowball Game
+# QA Portfolio
 
 ## 👋 Обо мне
 Я начинающий тестировщик игр с опытом работы в Unity (C#) и практикой в тестировании собственного игрового проекта **Snowball Game**.
@@ -52,4 +52,5 @@
 ## 📬 Контакты
 - Email: andreyzvyagin03@gmail.com
 - Telegram: http://t.me/AndrunoUno
+
 - GitHub: https://github.com/AndrunoUno
