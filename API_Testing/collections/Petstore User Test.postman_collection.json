@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "e4110263-9661-4c29-8fe8-c204b1a61953",
+		"name": "Petstore User Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48022715",
+		"_collection_link": "https://andrunouno-1792820.postman.co/workspace/%25D0%2590%25D0%25BD%25D0%25B4%25D1%2580%25D0%25B5%25D0%25B9-%25D0%2597%25D0%25B2%25D1%258F%25D0%25B3%25D0%25B8%25D0%25BD's-Workspace~eba7ef83-05bc-49f0-80ff-896d7c51eb88/collection/48022715-e4110263-9661-4c29-8fe8-c204b1a61953?action=share&source=collection_link&creator=48022715"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 77,\r\n  \"username\": \"Andrew\",\r\n  \"firstName\": \"Name\",\r\n  \"lastName\": \"Surname\",\r\n  \"email\": \"test@mail.ccc\",\r\n  \"password\": \"pass\",\r\n  \"phone\": \"+77777777777\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/user/Andrew",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"Andrew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 77,\r\n  \"username\": \"Andrew\",\r\n  \"firstName\": \"Name\",\r\n  \"lastName\": \"Surname\",\r\n  \"email\": \"test@mail.ccc\",\r\n  \"password\": \"changed_password\",\r\n  \"phone\": \"+77777777777\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/Andrew",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"Andrew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 77,\r\n  \"username\": \"Test\",\r\n  \"firstName\": \"Name\",\r\n  \"lastName\": \"Surname\",\r\n  \"email\": \"test@mail.ccc\",\r\n  \"password\": \"pass\",\r\n  \"phone\": \"+77777777777\",\r\n  \"userStatus\": 0\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/user/Andrew",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"Andrew"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

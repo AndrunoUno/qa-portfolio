@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "f75bce40-d37e-4a01-9db8-c473f57f68fc",
+		"name": "Petstore  Pet Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48022715",
+		"_collection_link": "https://andrunouno-1792820.postman.co/workspace/%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9-%D0%97%D0%B2%D1%8F%D0%B3%D0%B8%D0%BD's-Workspace~eba7ef83-05bc-49f0-80ff-896d7c51eb88/collection/48022715-f75bce40-d37e-4a01-9db8-c473f57f68fc?action=share&source=collection_link&creator=48022715"
+	},
+	"item": [
+		{
+			"name": "Get Pet By Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pet/findByStatus?status=sold,pending",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "sold,pending"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pet By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/pet/102",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pet",
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 102,\r\n  \"category\": {\r\n    \"id\": 666,\r\n    \"name\": \"Dogster\"\r\n  },\r\n  \"name\": \"Test-Dog\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 666,\r\n      \"name\": \"Dogster\"\r\n    }\r\n  ],\r\n  \"status\": \"avaiable\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/pet",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pet Information",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 201,\r\n  \"category\": {\r\n    \"id\": 777,\r\n    \"name\": \"Tegster\"\r\n  },\r\n  \"name\": \"Teggy\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 777,\r\n      \"name\": \"Teggy\"\r\n    }\r\n  ],\r\n  \"status\": \"sold\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/pet",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pet Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "additionalMetadata",
+							"value": "JuniorTester png",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/AndrunoUno/Pictures/стэтхэм_в_костюме_1К.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/pet/102/uploadImage/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pet",
+						"102",
+						"uploadImage",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "special-key",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/pet/102",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"pet",
+						"102"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
